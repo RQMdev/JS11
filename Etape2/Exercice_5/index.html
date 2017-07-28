@@ -11,7 +11,32 @@
     <label for="prenom">Prénom : </label><input type="text" name="prenom" value="" id="prenom" />
     <button type="button" name="button" >Envoyer</button>
   </form>
+	<style>
+	input {
+		outline: 0;
+	}
+	</style>
   <script>
+		var nom = document.getElementById('nom');
+		var prenom = document.getElementById('prenom');
+
+		nom.addEventListener('focusin', FocusIn(nom));
+		nom.addEventListener('focusout', FocusOut(nom));
+		prenom.addEventListener('focusin', FocusIn(prenom));
+		prenom.addEventListener('focusout', FocusOut(prenom));
+		// nom.onfocus = FocusIn(nom);
+		// nom.onfocusout = FocusOut(nom);
+		// prenom.onfocus = FocusIn(prenom);
+		// prenom.onfocusout = FocusOut(prenom);
+
+			function FocusIn(item){
+				console.log('focusin');
+				item.style.border = "1px solid green";
+			};
+			function FocusOut(item){
+				console.log('focusout');
+				item.style.border = "1px solid red";
+			};
 
   </script>
 </body>

@@ -16,7 +16,20 @@
   <div class="color blue" id="blue"></div>
 </div>
 <script>
+	var green = document.getElementById('green');
+	var red = document.getElementById('red');
+	var blue = document.getElementById('blue');
+	var texte = document.getElementById('texte');
 
+	green.onclick = function(){
+		texte.style.color = 'green';
+	};
+	red.onclick = function(){
+		texte.style.color = 'red';
+	};
+	blue.onclick = function(){
+		texte.style.color = 'blue';
+	};
 </script>
 </body>
 </html>

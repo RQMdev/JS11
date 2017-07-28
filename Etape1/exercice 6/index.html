@@ -21,9 +21,12 @@
     <li class="a_cacher">Laravel</li>
   </ol>
 <script>
-$(document).ready(function() {
-  $(".a_cacher").hide();
-});
+	var toHide = document.getElementsByClassName('a_cacher');
+	for (var i = 0; i < toHide.length; i++ ){
+		var item = toHide[i];
+		item.hidden = "hidden";
+	}
+
 </script>
 </body>
 </html>

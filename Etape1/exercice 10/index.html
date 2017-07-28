@@ -16,11 +16,14 @@
     Nunc maximus at purus id malesuada. Praesent congue dui vitae pellentesque eleifend. Nunc in ligula enim. Suspendisse nec tincidunt lacus, vitae vehicula magna. Nunc eu tempus enim. Nullam et rutrum quam, ut consectetur nunc. Duis tincidunt imperdiet velit, vel mattis tortor aliquam nec. Nulla ac vehicula elit. Mauris iaculis velit eu odio commodo viverra. Proin sit amet facilisis sapien. Aliquam volutpat placerat eros, eget pellentesque elit pretium ut. Maecenas lacinia ornare eros vitae lacinia. Etiam congue dapibus enim, sed fringilla sapien fringilla vitae.
   </div>
   <script>
-    $(document).ready(function() {
-      $("#texte_3").addClass("a_cacher");
-    $(".a_cacher").hide();
-  });
-});
+		var texte_3 = document.getElementById('texte_3');
+		texte_3.classList.add('a_cacher');
+  	var toHide = document.getElementsByClassName('a_cacher');
+		for ( var i = 0; i < toHide.length; i++){
+			var item = toHide[i];
+			item.hidden = "hidden";
+		}
+
   </script>
 </body>
 </html>

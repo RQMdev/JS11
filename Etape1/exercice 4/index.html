@@ -14,9 +14,11 @@
     <li>...</li>
   </ul>
   <script>
-    $(document).ready(function() {
-      $("li").css("color", "red");
-    });
+    var li = document.getElementsByTagName('li');
+		for (var i = 0; i < li.length; i++ ){
+			var item = li[i];
+			item.style.color = "red";
+		}
   </script>
 </body>
 </html>

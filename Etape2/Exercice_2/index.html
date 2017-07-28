@@ -8,11 +8,10 @@
   <body>
       <img src="images/image.jpg" id="image" />
       <script>
-$(document).ready(function(){
-  $("#image").dblclick(function(){
-  $(this).width("500px");
-  });
-});
+				var img = document.getElementById('image');
+				img.ondblclick = function(){
+					img.style.width = '500px';
+				}
       </script>
   </body>
 </html>

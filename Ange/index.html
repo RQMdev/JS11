@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+</head>
+<body>
+ <!-- <img id="cat" src="sadcat.jpg" alt=""> -->
+ <style>
+ 	html {
+		margin: 0;
+		padding: 0;
+ 	}
+  body {
+ 	margin: 0;
+	padding: 0;
+	width: 100vw;
+	height: 100vh;
+	background: url('sadcat.jpg') no-repeat;
+	background-size: cover;
+	background-position: center;
+ }
+
+ </style>
+<script>
+	var body = document.getElementsByTagName('body')[0];
+	var cat = 0;
+	setInterval(function(){
+
+		current = this;
+		if (cat == 0){
+			body.style.background =  "url('funnycat.jpg') no-repeat";
+			body.style.backgroundSize = "cover";
+			body.style.backgroundPosition = "center";
+			cat++;
+		} else {
+			body.style.background =  "url('sadcat.jpg') no-repeat";
+			body.style.backgroundSize = "cover";
+			body.style.backgroundPosition = "center";
+			cat--;
+		}
+	}, 1000);
+</script>
+</body>
+</html>

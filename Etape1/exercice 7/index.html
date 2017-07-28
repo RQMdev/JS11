@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <title>Exercice 7</title>
-  <script src="jquery-2.2.4.js"></script>
+  <script src="!jquery-2.2.4.js"></script>
 </head>
   <ul>
     <li>Html</li>
@@ -21,9 +21,10 @@
     <li class="a_supprimer">Laravel</li>
   </ol>
 <script>
-  $(document).ready(function() {
-    $(".a_supprimer").removeclass();
-  });
+  var toDelete = document.getElementsByClassName('a_supprimer');
+	while (toDelete[0]){
+		toDelete[0].parentNode.removeChild(toDelete[0]);
+	}
 </script>
 </body>
 </html>

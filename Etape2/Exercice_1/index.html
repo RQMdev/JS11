@@ -7,18 +7,32 @@
  <script src="jquery-2.2.4.js"></script>
  <script src="jquery-ui-1.11.4.custom/jquery-ui.min.js" type="text/javascript"></script>
  <title>Exercice 1</title>
- <script>
-    $(document).ready(function(){
-   $('#clique-moi').click(function(){
-       $('form').append('<div id="dialog" title="Base dialogue"><p>Bonjour et bienvenue sur mon site.</p></div>');
-       $('#dialog').dialog();
-   });
-    });
- </script>
 </head>
 <body>
  <form>
    <button type="button" name="button" id="clique-moi" >Clique-moi !</button>
  </form>
+ <style>
+	.pop-up {
+		position: absolute;
+		bottom: 0;
+		right: 0;
+		padding: 1em;
+		border: 1px black solid;
+	}
+ </style>
+ <script>
+ 	var body = document.getElementsByTagName('body')[0];
+	var button = document.getElementById('clique-moi');
+	button.onclick = function(){
+		var PopUp = document.createElement('div');
+		PopUp.classList.add('pop-up');
+		PopUp.innerHTML = 'BRAVOOOOO';
+		body.appendChild(PopUp);
+		setTimeout(function(){
+			body.removeChild(PopUp);
+		}, 4000);
+	};
+ </script>
 </body>
 </html>
